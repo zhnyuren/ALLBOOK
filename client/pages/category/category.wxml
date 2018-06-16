@@ -1,0 +1,49 @@
+<view class="container">
+
+    <!--左侧栏-->
+    <scroll-view class='scroll_left' scroll-y="true">
+        <view class="nav_left">
+            <block wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="*this">
+                <!--当前项的id等于item项的id，那个就是当前状态-->
+                <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开右侧侧滑栏使用-->
+                <view class="nav_left_items {{curNav == idx ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.id}}" id="{{idx}}">{{itemName[0].Category}}</view>
+            </block>
+        </view>
+    </scroll-view>
+
+    <!--右侧栏-->
+    <scroll-view scroll-y="true" class="scroll_right" style="height:{{winHeight}}px;" scroll-into-view="{{scrollTopId}}" scroll-with-animation="true">
+
+        <view class="nav_right">
+
+            <view class='common-list' wx:for="{{list}}" wx:for-index="idx" wx:for-item="itemName" wx:key="*this" bindscroll="scrollTop">
+
+                <text id='{{idx}}'>{{itemName[0].Category}}</text>
+                <block wx:for="{{itemName}}" wx:key="*this">
+                    <view class="list-item" data-bid="{{item.ISBN}}" bindtap="toDetailPage">
+                        <view class="index-list-item">
+
+                            <view class="cover">
+                                <image class="cover-img" src="{{item.Picture}}"></image>
+                            </view>
+
+                            <view class="content">
+                                <view class="title" style="color: black;">
+                                    <block wx:for="{{item.Name}}" wx:for-item="it" wx:key="*this">{{it}}</block>
+                                </view>
+                                <text class="desc">{{item.Category}} / <block wx:for="{{item.Author}}" wx:for-item="it" wx:key="*this">{{it}}</block></text>
+                            </view>
+
+                        </view>
+                    </view>
+                </block>
+
+            </view>
+            <view style="width:100%;height:30rpx;background:#f0f4f7"></view>
+        </view>
+    </scroll-view>
+</view>
+
+<loading hidden="{{loadidngHidden}}">
+    加载中...
+</loading>

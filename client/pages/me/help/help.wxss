@@ -1,0 +1,22 @@
+.text-head {
+    font-family: STHeiti;
+    font-size: 32rpx;
+}
+
+.clause {
+    font-family: Adobe Fangsong Std;
+    font-size: 32rpx;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 50rpx;
+    font-size: 40rpx;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.logo image {
+    width: 250rpx;
+    height: 250rpx;
+}

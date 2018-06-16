@@ -1,0 +1,15 @@
+<!--pages/me/clause/clause.wxml-->
+<view class="container">
+    <view class="logo">
+        <image src="../../images/book.png" />
+        <view>
+            <text>全书</text>
+        </view>
+    </view>
+    <text class="name">本应用程序中搜索结果仅供参考</text>
+    <!--<image class="user-avatar" src=""></image>-->
+    <text class="name">恕不对购买链接中的商品负责</text>
+    <!--<image class="user-avatar" src=""></image>-->
+    <text class="name">点击右上角菜单按钮，欢迎分享</text>
+    <text class="name"> </text>
+</view>

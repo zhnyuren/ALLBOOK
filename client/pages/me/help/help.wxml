@@ -1,0 +1,14 @@
+<view class="container">
+    <view class="logo">
+        <image src="../../images/book.png" />
+        <view>
+            <text>全书</text>
+        </view>
+    </view>
+    <text class="name">北京航空航天大学软件学院</text>
+    <!--<image class="user-avatar" src=""></image>-->
+    <text class="name">全书微信小程序项目组</text>
+    <!--<image class="user-avatar" src=""></image>-->
+    <text class="name"> </text>
+    <text class="name"> </text>
+</view>

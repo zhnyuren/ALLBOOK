@@ -1,0 +1,23 @@
+{
+    "tabBar": {
+        "backgroundColor": "#F6F6F6",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/addCgi/addCgi",
+                "text": "分类"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索"
+            },
+            {
+                "pagePath": "pages/settings/settings",
+                "text": "我的"
+            }
+        ]
+    }
+}

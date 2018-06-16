@@ -1,0 +1,26 @@
+<!--
+<view class='logo_pic'>
+    <image src='/images/logo.jpg' />
+</view>
+-->
+<view class="book-meta">
+    <view class="meta-info">
+        <text class="book-title">今日推荐</text>
+    </view>
+</view>
+<swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">
+    <block wx:for="{{movies}}" wx:for-index="index">
+        <swiper-item>
+            <image src="{{item.url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class="book-meta">
+    <view class="meta-info">
+        <text class="book-title">今日书评</text>
+    </view>
+</view>
+<view>
+    <image class="test_img" mode="widthFix" src="/images/comment1.jpg"></image>
+    <image class="test_img" mode="widthFix" src="/images/comment2.jpg"></image>
+</view>

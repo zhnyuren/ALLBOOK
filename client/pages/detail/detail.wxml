@@ -1,0 +1,43 @@
+<view wx:if="{{bookData}}">
+
+    <view class="cover-container">
+        <image src="{{bookData.Picture}}"></image>
+    </view>
+
+    <view class="book-meta">
+        <view class="meta-info">
+            <text class="book-title">{{bookData.Name}}</text>
+            <text class="recommend-meta">推荐语：{{bookData.Recommend}}</text>
+            <text class="other-meta">ISBN：{{bookData.ISBN}}</text>
+            <text class="other-meta">作者：{{bookData.Author}}</text>
+            <text class="other-meta">页数：{{bookData.Page_Num}}</text>
+            <text class="other-meta">出版社：{{bookData.Press}}</text>
+            <text class="other-meta">出版日期：{{bookData.Publish_Year}}</text>
+            <text class="other-meta">定价：{{bookData.Price}}</text>
+        </view>
+        <view class="range">
+            <text class="viewers">豆瓣评分</text>
+            <text class="score">{{bookData.Score}}</text>
+        </view>
+    </view>
+
+    <view class="book-intro" wx:if="{{bookData.DangDang_Link}}">
+        <button class="button" bindtap='copyJDText'>复制京东购书链接到剪切版</button>
+    </view>
+
+    <view class="book-intro" wx:if="{{bookData.DangDang_Link}}">
+        <button class="button" bindtap='copyDDText'>复制当当购书链接到剪切版</button>
+    </view>
+
+    <view class="book-intro" wx:if="{{bookData.Introduction}}">
+        <view class="intro-header">
+            <text>内容简介：</text>
+        </view>
+        <text class="intro-content">{{bookData.Introduction}}</text>
+    </view>
+
+</view>
+
+<loading hidden="{{loadidngHidden}}">
+    加载中...
+</loading>
