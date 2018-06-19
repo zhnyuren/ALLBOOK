@@ -6,6 +6,7 @@ Page({
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo')
     },
+
     onLoad: function (options) {
         // 生命周期函数--监听页面加载   
         console.log('onLoad')
@@ -38,15 +39,16 @@ Page({
             })
         }
     },
-    
+
     onShareAppMessage: function () {
         // 用户点击右上角分享
         return {
-            title: '', // 分享标题
-            desc: '', // 分享描述
+            title: '全书小程序', // 分享标题
+            desc: '全书小程序', // 分享描述
             path: '' // 分享路径
         }
     },
+
     showMyWord: function () {
         wx.showModal({
             title: '提示',
@@ -59,6 +61,7 @@ Page({
             }
         })
     },
+
     showClause: function () {
         wx.navigateTo({
             url: './clause/clause',
@@ -73,6 +76,7 @@ Page({
             }
         })
     },
+
     showHelp: function () {
         wx.navigateTo({
             url: './help/help',

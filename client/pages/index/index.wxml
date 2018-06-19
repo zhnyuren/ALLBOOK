@@ -15,6 +15,7 @@
         </swiper-item>
     </block>
 </swiper>
+
 <view class="book-meta">
     <view class="meta-info">
         <text class="book-title">今日书评</text>

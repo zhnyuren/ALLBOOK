@@ -49,15 +49,6 @@ function requestCategory(data, successCb, errorCb, completeCb) {
     request(api.API_BOOK_CATEGORY, data, successCb, errorCb, completeCb);
 }
 
-/**
- * 关键字是否是tag
- */
-/*
-function requestHasTag(tag, successCb, errorCb, completeCb) {
-    request(api.API_BOOK_SEARCH, {tag: tag, count: 1}, successCb, errorCb, completeCb);
-}
-*/
-
 module.exports = {
     requestSearchBook: requestSearchBook,
     requestBookDokDetail: requestBookDokDetail,

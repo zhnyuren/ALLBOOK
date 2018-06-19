@@ -8,6 +8,14 @@ Page({
         loadidngHidden: false,
     },
 
+    onShareAppMessage() {
+        return {
+            title: '分类页面',
+            desc: '分类页面',
+            path: '/pages/category/category'
+        };
+    },
+
     toDetailPage: function (e) {
         var ISBN = e.currentTarget.dataset.bid; //图书id [data-bid]
         console.log(ISBN);

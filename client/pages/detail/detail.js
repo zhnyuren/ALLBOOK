@@ -8,6 +8,14 @@ Page({
         bookData: null
     },
 
+    onShareAppMessage() {
+        return {
+            title: '书籍信息',
+            desc: '书籍信息',
+            path: '/pages/detail/detail?ISBN=' + this.data.bookData.ISBN
+        };
+    },
+
     copyJDText: function () {
         wx.setClipboardData({
             data: this.data.bookData.JingDong_Link + "",
